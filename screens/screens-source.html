@@ -1,0 +1,56 @@
+<!doctype html><meta charset="utf-8">
+<!-- Source of the three example screens of hero v2. ?lang=fr|en|ar — captured to assets/hero-v2/*.jpg -->
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}body{font-family:Poppins,"Noto Sans Arabic",sans-serif;color:#070c2d;background:#888}
+.v{position:relative;overflow:hidden}
+#outil{width:1000px;height:625px;background:#f3f7ff;display:flex;flex-direction:column}
+#outil header{display:flex;align-items:center;justify-content:space-between;height:74px;padding:0 34px;background:#fff;border-bottom:2px solid #dfe8f5;font-weight:700;font-size:23px}
+#outil header em{font-style:normal;font-size:15px;font-weight:600;color:#51617d;border:2px solid #dfe8f5;border-radius:99px;padding:4px 14px}
+#outil h2{font-size:38px;letter-spacing:-.03em;padding:24px 34px 18px;line-height:1.1}
+.g{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:0 34px 34px}
+.c{background:#fff;border-radius:16px;padding:19px 21px;display:flex;flex-direction:column}
+.c s{font:600 29px/1 Caveat;color:#070c2d;background:#ffe04a;padding:8px 13px 9px;transform:rotate(-2deg);text-decoration-color:#e00416;text-decoration-thickness:2.5px;align-self:flex-start;white-space:nowrap}
+[dir=rtl] .c s{font:600 18px/1.5 "Noto Sans Arabic"}
+.c b{font-size:23px;line-height:1.2;margin-top:auto}.c p{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:600;color:#0b7a2f;margin-top:6px}
+.c i{width:22px;height:22px;border-radius:50%;background:#00f53b;display:grid;place-items:center;flex:none}
+.c i svg{width:13px;height:13px;stroke:#070c2d;stroke-width:4;fill:none}
+.c.k{background:#0066ff;color:#fff}.c.k p{color:#fff}
+.ph{width:390px;height:844px}
+#site{background:#00f53b;padding:34px 28px;display:flex;flex-direction:column}
+#site .t{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:21px}
+#site .t span{width:30px;height:18px;border-block:4px solid #070c2d}
+#site h2{font-size:56px;line-height:1;letter-spacing:-.045em;margin-top:66px}[dir=rtl] h2{letter-spacing:0!important;line-height:1.3!important}
+#site .card{margin-top:auto;background:#fff;border-radius:24px;padding:26px}
+#site .card strong{font-size:22px}.sl{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:18px 0}
+.sl span{border:2px solid #dfe8f5;border-radius:12px;font-weight:600;font-size:20px;text-align:center;padding:11px}.sl .on{background:#070c2d;border-color:#070c2d;color:#fff}
+#site .btn{background:#0066ff;color:#fff;border-radius:14px;font-weight:700;font-size:20px;text-align:center;padding:17px}
+#application{background:#070c2d;color:#fff;padding:34px 24px;display:flex;flex-direction:column}
+#application h2{font-size:50px;line-height:1;letter-spacing:-.04em;margin:48px 0 34px}
+#application .t{font-weight:700;font-size:21px}
+.n{background:#171e48;border-radius:20px;padding:20px;display:flex;gap:15px;align-items:center;margin-bottom:13px}
+.n i{width:44px;height:44px;border-radius:13px;background:#00f53b;display:grid;place-items:center;flex:none}.n i svg{width:23px;height:23px;stroke:#070c2d;stroke-width:3.4;fill:none}
+.n b{display:block;font-size:20px;line-height:1.25}.n span{color:#aebcdc;font-size:16px}
+.big{margin-top:auto;background:#0066ff;border-radius:22px;padding:24px;font-weight:700;font-size:23px;line-height:1.25}
+</style>
+<div class="v" id="outil"></div><div class="v ph" id="site"></div><div class="v ph" id="application"></div>
+<script>
+const L={
+fr:{ex:"Exemple",logo:"Votre entreprise",day:"Aujourd’hui, tout est clair.",done:"Fait",
+ c:[["RDV 14h ? ou 15h","Rendez-vous à 14:00","Confirmé"],["devis à envoyer !!","Devis client","Envoyé"],["stock ???","Stock","À jour"],["rappeler Mme Benali","Mme Benali","Rappel programmé"],["facture perdue","Facture","Classée"],["voir WhatsApp","Messages","Réunis ici"]],
+ h:"Vos clients vous trouvent.",bk:"Choisissez une heure",btn:"Prendre rendez-vous",app:"Rien ne se perd.",
+ n:[["Rendez-vous confirmé","Mme Benali, 14:00"],["Devis envoyé","Suivi automatique"],["Stock à jour","Visible par l’équipe"],["Facture classée","Retrouvée en un geste"]],big:"Tout est à jour."},
+en:{ex:"Example",logo:"Your business",day:"Today, everything is clear.",done:"Done",
+ c:[["2pm ? or 3pm","Appointment at 14:00","Confirmed"],["send the quote !!","Client quote","Sent"],["stock ???","Stock","Up to date"],["call back Mrs Benali","Mrs Benali","Reminder set"],["lost invoice","Invoice","Filed"],["check WhatsApp","Messages","All in one place"]],
+ h:"Your customers find you.",bk:"Choose a time",btn:"Book an appointment",app:"Nothing gets lost.",
+ n:[["Appointment confirmed","Mrs Benali, 14:00"],["Quote sent","Automatic follow-up"],["Stock up to date","Visible to the team"],["Invoice filed","Found in one tap"]],big:"Everything is up to date."},
+ar:{ex:"مثال",logo:"شركتك",day:"اليوم، كل شيء واضح.",done:"تم",
+ c:[["موعد 14 ؟ أو 15","موعد الساعة 14:00","مؤكد"],["إرسال العرض !!","عرض السعر","أُرسل"],["المخزون ؟","المخزون","محدّث"],["الاتصال بالزبونة","السيدة بن علي","تذكير مبرمج"],["فاتورة ضائعة","الفاتورة","محفوظة"],["راجع واتساب","الرسائل","مجمّعة هنا"]],
+ h:"عملاؤك يجدونك.",bk:"اختر الوقت",btn:"احجز موعداً",app:"لا شيء يضيع.",
+ n:[["موعد مؤكد","السيدة بن علي، 14:00"],["أُرسل العرض","متابعة تلقائية"],["المخزون محدّث","مرئي للفريق"],["الفاتورة محفوظة","تجدها بلمسة"]],big:"كل شيء محدّث."}};
+const k=new URLSearchParams(location.search).get("lang")||"fr",t=L[k],ck='<i><svg viewBox="0 0 24 24"><path d="M4 13l5 5L20 6"/></svg></i>';
+document.documentElement.dir=k==="ar"?"rtl":"ltr";
+outil.innerHTML=`<header>${t.logo}<em>${t.ex}</em></header><h2>${t.day}</h2><div class="g">${t.c.map((c,i)=>`<div class="c ${i?'':'k'}"><s>${c[0]}</s><b>${c[1]}</b><p>${ck}${c[2]}</p></div>`).join("")}</div>`;
+site.innerHTML=`<div class="t">${t.logo}<span></span></div><h2>${t.h}</h2><div class="card"><strong>${t.bk}</strong><div class="sl"><span>13:30</span><span class="on">14:00</span><span>14:30</span><span>15:00</span></div><div class="btn">${t.btn}</div></div>`;
+application.innerHTML=`<div class="t">${t.logo}</div><h2>${t.app}</h2>${t.n.map(n=>`<div class="n">${ck}<div><b>${n[0]}</b><span>${n[1]}</span></div></div>`).join("")}<div class="big">${t.big}</div>`;
+</script>
