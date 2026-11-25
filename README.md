@@ -75,4 +75,4 @@ See [`PROMPT.md`](PROMPT.md): the brief and the pitfalls, ready to paste into an
 
 ## Licence
 
-MIT. Keep the copyright line.
+Free for everyone, for any use, commercial or not. Public domain ([Unlicense](LICENSE)): no condition, no credit required.

@@ -1,5 +1,5 @@
 /* paper-hero: paper notes fly around the headline, then assemble into your products as the page scrolls.
-   One WebGL2 draw call, no library. MIT licence. Settings: see README.md (window.PaperHero). */
+   One WebGL2 draw call, no library. Public domain. Settings: see README.md (window.PaperHero). */
 (() => {
   const root = document.documentElement;
   const hero = document.querySelector(".paper-hero");
